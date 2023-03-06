@@ -1,0 +1,356 @@
+
+body {
+  background-color: #ffadb6;
+}
+
+
+/* Navbar styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f2f2f2;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin-right: 2rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #0099cc;
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+}
+
+nav ul ul li {
+  display: block;
+}
+
+nav ul li:hover > ul {
+  display: block;
+}
+
+/* Main content styles */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+}
+
+.flex-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.flex-box .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.flex-box .container p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.flex-box .container img {
+  max-width: 100%;
+}
+
+.card {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  perspective: 1000px;
+  margin-right: 2rem;
+}
+
+.card .front,
+.card .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  backface-visibility: hidden;
+}
+
+.card .front {
+  transform: rotateY(0deg);
+}
+
+.card .back {
+  transform: rotateY(180deg);
+}
+
+.card:hover .front {
+  transform: rotateY(-180deg);
+}
+
+.card:hover .back {
+  transform: rotateY(0deg);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* Footer styles */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 1rem;
+}
+
+footer p {
+  margin-right: 2rem;
+}
+
+.social-icons a {
+  margin-right: 1rem;
+  color: #333;
+}
+
+.social-icons a:hover {
+  color: #0099cc;
+}
+
+.social-icons i {
+  font-size: 1.5rem;
+}
+
+
+/* ##################################################################################################################################
+
+
+                                                     /* Sign up box styles */
+
+/* ##################################################################################################################################### */
+
+/* Sign up box styles */
+
+
+.signUpBox {
+  width: 400px;
+  height: 500px;
+  margin: auto;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.signUpBoxContent {
+  margin-top: 40px;
+}
+
+.signUpBoxTitle {
+  margin-top: 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.signUpBox input[type="text"],
+.signUpBox input[type="email"],
+.signUpBox input[type="tel"],
+.signUpBox input[type="password"] {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  color: #333333;
+}
+
+.signUpBox button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  background-color: #ffadb6;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.signUpBox p {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666666;
+}
+
+.signUpBox a {
+  color: #ffadb6;
+  text-decoration: none;
+}
+
+.signUpBox a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+/* ######################################################################################################################################## */
+
+
+                                                         /* SignInSignUp box */
+
+
+/* ############################################################################################################################################## */
+
+.signInSignUpBox {
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.signInSignUpBoxTitle {
+  color: #ffadb6;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+
+.signInSignUpBox p {
+  color: #333;
+  font-size: 18px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.signInSignUpBox form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.signInSignUpBox form input[type="text"],
+.signInSignUpBox form input[type="password"] {
+  background-color: #fff;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  height: 40px;
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+}
+
+.signInSignUpBox form button[type="submit"] {
+  background-color: #ffadb6;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  height: 40px;
+  margin: 10px 0;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+}
+
+.signInSignUpBox form button[type="submit"]:hover {
+  background-color: #f26d7d;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.signInSignUpBoxLink {
+  color: #333;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.signInSignUpBoxLink a {
+  color: #ffadb6;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.signInSignUpBoxLink a:hover {
+  color: #f26d7d;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
