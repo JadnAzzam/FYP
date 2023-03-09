@@ -1,11 +1,14 @@
 import React from 'react';
+import Navigation from './Navigation';
+import Footer from './Footer';
+import Navbar from 'react-bootstrap/Navbar';
 
 const HomePage = () => {
     return (
         <div className= "HomePage">
 
             {/* Navbar */}
-      <nav>
+      {/* <nav>
         <ul>
           <li><a href="/">Home</a></li>
           <li>
@@ -17,7 +20,8 @@ const HomePage = () => {
             </ul>
           </li>
         </ul>
-      </nav>
+      </nav> */}
+      <Navbar> <Navigation /></Navbar>
 
       {/* Main content */}
       <div className="content">
@@ -82,14 +86,15 @@ const HomePage = () => {
       </div>
 
       {/* Footer */}
-      <footer>
+      {/* <footer>
         <p>FYP project</p>
         <div className="social-icons">
           <a href="/"><i className="fa fa-youtube"></i></a>
           <a href="/"><i className="fa fa-facebook"></i></a>
           <a href="/"><i className="fa fa-instagram"></i></a>
         </div>
-      </footer>
+      </footer> */}
+      <footer> <Footer /> </footer>
 
             
              </div>
