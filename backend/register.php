@@ -1,7 +1,7 @@
 <?php
 
 // Establishing database connection
-require_once('db_connect.php');
+require_once('mysql_connect.php');
 
 // Checking if the form was submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

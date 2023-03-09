@@ -2,11 +2,11 @@
 
 $host = "localhost";
 $username = "root";
-$password = "mypassword";
+$password = "";
 $database = "childsweb";
 
 // Create connection
-$conn = new mysqli($host, $username, $password, $database);
+$conn = new mysqli($host, $username, $password, $database, 3306);
 
 // Check connection
 if ($conn->connect_error) {
