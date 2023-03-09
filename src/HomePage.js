@@ -36,7 +36,7 @@ const HomePage = () => {
           <div className="card">
             <div className="front">
               <h1>Arcade</h1>
-              {/* <img src="/arcade.jpg" alt="Card front" /> */}
+              <img src="/arcade.jpg" alt="Card front" />
             </div>
             <div className="back">
               <p>Card content 1</p>
