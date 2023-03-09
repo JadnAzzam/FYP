@@ -26,7 +26,7 @@ const HomePage = () => {
       {/* Main content */}
       <div className="content">
         {/* First horizontal flex box */}
-        <div className="flex-box">
+        <div className="flex-box space">
           <div className="container">
             <p>It's important to provide a safe and nurturing environment for kids to grow and learn.</p>
           </div>
@@ -36,15 +36,18 @@ const HomePage = () => {
         </div>
 
         {/* Second horizontal flex box */}
-        <div className="flex-box">
+        <div className="flex-box space">
           <div className="card">
             <div className="front">
-              <img src="card-image-1.jpg" alt="Card front" />
+              <h1>Arcade</h1>
+              {/* <img src="/arcade.jpg" alt="Card front" /> */}
             </div>
             <div className="back">
               <p>Card content 1</p>
             </div>
           </div>
+
+
           <div className="card">
             <div className="front">
               <img src="card-image-2.jpg" alt="Card front" />
@@ -72,7 +75,7 @@ const HomePage = () => {
         </div>
 
         {/* Third horizontal flex box */}
-        <div className="flex-box">
+        <div className="flex-box space">
           <div className="container">
             <p>"I had a great experience using this product. Highly recommended!"</p>
           </div>

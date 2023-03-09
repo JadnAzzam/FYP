@@ -1,6 +1,7 @@
 
 body {
-  background-color: #ffadb6;
+  /* background-color: #ffadb6; */
+  background: linear-gradient(0deg, rgba(255,211,114,1) 0%, rgba(255,153,215,1)100%);
 }
 
 
@@ -54,6 +55,7 @@ nav ul li:hover > ul {
   flex-direction: column;
   align-items: center;
   margin: 2rem;
+  /* overflow:hidden; */
 }
 
 .flex-box {
@@ -89,6 +91,10 @@ nav ul li:hover > ul {
   margin-right: 2rem;
 }
 
+.space {
+  padding: 5px;
+}
+
 .card .front,
 .card .back {
   position: absolute;
@@ -98,6 +104,17 @@ nav ul li:hover > ul {
   height: 100%;
   transition: transform 0.6s;
   backface-visibility: hidden;
+  overflow:hidden;
+}
+
+.card .front{
+  background-image: url('/public/arcade.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.card .back {
+  box-shadow: 10px 10px 5px grey;
 }
 
 .card .front {
