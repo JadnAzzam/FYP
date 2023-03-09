@@ -3,6 +3,9 @@ import './App.css';
 import SignInSignUpBox from './SignInSignUpBox';
 import HomePage from './HomePage';
 import SignUpPage from './SignUpPage';
+import Navigation from './Navigation';
+
+
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
