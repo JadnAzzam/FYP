@@ -1,7 +1,7 @@
 
 body {
-  /* background-color: #ffadb6; */
-  background: linear-gradient(0deg, rgba(255,211,114,1) 0%, rgba(255,153,215,1)100%);
+  background-color: #adfaff;
+  /* background: linear-gradient(0deg, rgba(255,211,114,1) 0%, rgba(255,153,215,1)100%); */
 }
 
 
@@ -80,7 +80,7 @@ nav ul li:hover > ul {
 }
 
 .flex-box .container img {
-  max-width: 100%;
+  max-width: 50%;
 }
 
 .card {
@@ -108,9 +108,9 @@ nav ul li:hover > ul {
 }
 
 .card .front{
-  background-image: url('/public/arcade.jpg');
-  background-size: cover;
-  background-position: center;
+  /* background-image: url('/public/background-cards.png'); */
+  background-size:cover;
+  background-position:center;
 }
 
 .card .back {
@@ -144,8 +144,13 @@ nav ul li:hover > ul {
   text-align: center;
 }
 
+
+
+
+
+
 /* Footer styles */
-footer {
+/* footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -168,7 +173,7 @@ footer p {
 
 .social-icons i {
   font-size: 1.5rem;
-}
+} */
 
 
 /* ##################################################################################################################################
@@ -353,6 +358,7 @@ footer p {
 }
 
 
+.emphasized { font-style: italic;}
 
 
 

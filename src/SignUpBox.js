@@ -6,7 +6,7 @@ function SignUpBox() {
   return (
     <div className="signUpBox">
       <div className="signUpBoxContent">
-        <div className="signUpBoxTitle">FYP</div>
+        <div className="signUpBoxTitle">ImaginationStation</div>
         <div className="signUpBoxSubtitle">Welcome to sign up page.</div>
         <form>
           <input type="text" placeholder="Username" />
