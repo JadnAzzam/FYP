@@ -45,9 +45,9 @@ The backend is written using php language that is connected to a MySQL database.
 
 ### Dependencies
 
-Download wamp server [here] (https://www.wampserver.com/en/download-wampserver-64bits/)
+Download wamp server (https://www.wampserver.com/en/download-wampserver-64bits/)
 
-Download MySQL Server and MySQL Workbench [here] (https://dev.mysql.com/downloads/workbench/)
+Download MySQL Server and MySQL Workbench (https://dev.mysql.com/downloads/workbench/)
 
 ## Learn More
 
