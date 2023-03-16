@@ -39,6 +39,16 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+## Backend
+
+The backend is written using php language that is connected to a MySQL database.
+
+### Dependencies
+
+Download wamp server [here] (https://www.wampserver.com/en/download-wampserver-64bits/)
+
+Download MySQL Server and MySQL Workbench [here] (https://dev.mysql.com/downloads/workbench/)
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
