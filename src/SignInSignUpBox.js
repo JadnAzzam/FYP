@@ -17,21 +17,15 @@ function SignInSignUpBox() {
   return (
     <div className="signInSignUpBox">
       <div className="signInSignUpBoxContent">
-<<<<<<< HEAD
         <div className="signInSignUpBoxTitle">ImaginationStation</div>
         <form>
           <input type="text" placeholder="Username" />
+          <select className="role">
+            <option value="parent" >Parent </option>
+            <option value="child">Child</option>
+          </select>
           <input type="password" placeholder="Password" />
           <button type="submit"><Link to="/home">Sign In</Link></button>
-=======
-        <div className="signInSignUpBoxTitle">FYP</div>
-        <form 
-          method="post"
-          onSubmit={(event) => handleSumbit(event)}>
-          <input name="username" type="text" placeholder="Username" />
-          <input name="password" type="password" placeholder="Password" />
-          <button type="submit">Sign In</button>
->>>>>>> d2a05afc46dad5554931fada635944369769e6d8
         </form>
         <div className="signInSignUpBoxLink">
           Don't have an account? <Link to="/signup">Sign up.</Link>

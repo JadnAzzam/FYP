@@ -3,6 +3,7 @@ import Navigation from './Navigation';
 import Footer from './Footer';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
+import "@fontsource/bubblegum-sans";
 
 const HomePage = () => {
     return (
@@ -25,13 +26,12 @@ const HomePage = () => {
       <Navbar> <Navigation /></Navbar>
 
       {/* Main content */}
-      <div className="content">
+      {/* <div className="content"> */}
         {/* First horizontal flex box */}
         <div className="flex-box space">
           <div className="card">
             <div className="front">
-              <h1></h1>
-              <img src="/Games.png" alt="Card front" />
+              <img src="/Arcade 2.png" alt="Card front" />
             </div>
             <div className="back">
               <p>Arcades are a blast! Spend an afternoon socializing and competing with friends to beat the high score.</p>
@@ -41,7 +41,7 @@ const HomePage = () => {
 
           <div className="card">
             <div className="front">
-              <img src="/coding.png" alt="Card front" />
+              <img src="/Coding2.png" alt="Card front" />
             </div>
             <div className="back">
               <p>Coding is a blast! With programming skills, you can create your own video games and turn your imagination into a playable reality. Don't be afraid to experiment and have some fun while
@@ -51,7 +51,7 @@ const HomePage = () => {
           </div>
           <div className="card">
             <div className="front">
-              <img src="/Math.png" alt="Card front" />
+              <img src="/Math2.png" alt="Card front" />
             </div>
             <div className="back">
               <p>Math can be fun! Solve puzzles and brain teasers to challenge your math skills and have a good time.</p>
@@ -59,7 +59,7 @@ const HomePage = () => {
           </div>
           <div className="card">
             <div className="front">
-              <img src="/virtual-tour.jpg" alt="Card front" />
+              <img src="/virtualtour2.png" alt="Card front" />
             </div>
             <div className="back">
               <p>Virtual tours are like magic carpets that can take you anywhere you want to go! You can explore the world without ever leaving your house. Let's go on a virtual adventure 
@@ -157,7 +157,7 @@ const HomePage = () => {
          
             </div>
         </div>
-      </div>
+      {/* </div> */}
 
       {/* Footer */}
       {/* <footer>

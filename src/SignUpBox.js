@@ -17,13 +17,14 @@ function SignUpBox() {
     <div className="signUpBox">
       <div className="signUpBoxContent">
         <div className="signUpBoxTitle">ImaginationStation</div>
-        <div className="signUpBoxSubtitle">Welcome to sign up page.</div>
+        <div className="signUpBoxSubtitle">Welcome to sign up page
+        .</div>
         <form 
           method="post"
           onSubmit={(event) => handleSumbit(event)}>
           <input name="username" type="text" placeholder="Username" />
           <input type="email" placeholder="Email" />
-          <input type="tel" placeholder="Phone number" />
+          {/* <input type="tel" placeholder="Phone number" /> */}
           <input name="password" type="password" placeholder="Password" />
           <button type="submit"><Link to="/">Sign Up</Link></button>
         </form>

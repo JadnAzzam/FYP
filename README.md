@@ -78,3 +78,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Front-end:
+
+## downlaod react-bootstrap library
+## downlaod @fontsource/bubblegum-sans
+## download mbd-react-ui kiy ( you might not need to downlaod it , downlad bootstrap-react before)

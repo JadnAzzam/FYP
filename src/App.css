@@ -6,7 +6,7 @@ body {
 
 
 /* Navbar styles */
-nav {
+/* nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,8 +47,8 @@ nav ul ul li {
 
 nav ul li:hover > ul {
   display: block;
-}
-
+} */
+/* Our navbar component styling is imported from bootstrap */
 /* Main content styles */
 .content {
   display: flex;
@@ -89,6 +89,7 @@ nav ul li:hover > ul {
   height: 300px;
   perspective: 1000px;
   margin-right: 2rem;
+  border-radius: 20px;
 }
 
 .space {
@@ -105,16 +106,19 @@ nav ul li:hover > ul {
   transition: transform 0.6s;
   backface-visibility: hidden;
   overflow:hidden;
+  border-radius: 20px;
+  
 }
 
-.card .front{
-  /* background-image: url('/public/background-cards.png'); */
+/* .card .front{
+  background-image: url('/public/background-cards.png');
   background-size:cover;
   background-position:center;
-}
+} */
 
 .card .back {
   box-shadow: 10px 10px 5px grey;
+  overflow: auto;
 }
 
 .card .front {
@@ -141,7 +145,13 @@ nav ul li:hover > ul {
 
 .card p {
   font-size: 1.2rem;
+  font-family:"Bubblegum Sans";
   text-align: center;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+
 }
 
 
@@ -200,6 +210,10 @@ footer p {
   border-radius: 5px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
   text-align: center;
+}
+.signUpBoxSubtitle{
+  margin-bottom: 20px;
+  margin-top:10 px;
 }
 
 .signUpBoxContent {
@@ -309,7 +323,9 @@ footer p {
 }
 
 .signInSignUpBox form input[type="text"],
-.signInSignUpBox form input[type="password"] {
+.signInSignUpBox form input[type="password"]
+{
+
   background-color: #fff;
   border: none;
   border-radius: 20px;
@@ -326,7 +342,7 @@ footer p {
   border: none;
   border-radius: 20px;
   color: #fff;
-  cursor: pointer;
+  /* cursor: pointer; */
   font-size: 16px;
   font-weight: bold;
   height: 40px;
@@ -357,8 +373,51 @@ footer p {
   color: #f26d7d;
 }
 
+.signInSignUpBox form select {
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 20px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  color: #333;
+  font-size: 16px;
+  color: #495057;
+  height: 40px;
+  margin: 8px 20px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 20px;
+  transition: all 0.2s ease-in-out;
+  
+}
+.signInSignUpBox form select:focus {
+  outline:none;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+}
 
-.emphasized { font-style: italic;}
+.signInSignUpBox form select option {
+  background-color: #fff;
+  color: #495057;
+  border-radius: 20px;
+}
+
+
+
+/* Style the dropdown arrow */
+.signInSignUpBox form select::-ms-expand {
+  display: none;
+}
+.signInSignUpBox form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5' viewBox='0 0 8 5'%3E%3Cpath fill='%23ffadb6' d='M0 0l4 4 4-4z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+
+
+
+
 
 
 
