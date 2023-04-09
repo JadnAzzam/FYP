@@ -417,22 +417,25 @@ footer p {
 
 
 
+/*##########################################################################################################
+                        FOOTER STYLING 
+##########################################################################################################*/
 
+.footer-link {
+  transition: color 0.3s ease;
+}
 
+.footer-link:hover {
+  color: #0099cc;
+}
+.MDBFooter {
+  padding: 2rem 0;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.MDBFooter .border-bottom {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+.MDBCol p {
+  line-height: 1.5;
+}
