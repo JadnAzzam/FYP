@@ -49,22 +49,22 @@ function Footer (){
                     <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-2 p-2'>
                       <h6 className='text-uppercase fw-bold mb-2'> Links</h6>
                       <p>
-                        <a href='/SignUp' className='text-reset'>
+                        <a href='/SignUp' className='text-reset footer-link'>
                           SignUp
                         </a>
                       </p>
                       <p>
-                        <a href='/About Us' className='text-reset'>
+                        <a href='/About Us' className='text-reset footer-link'>
                           About Us
                         </a>
                       </p>
                       <p>
-                        <a href='/Privacypolicy' className='text-reset'>
+                        <a href='/Privacypolicy' className='text-reset footer-link'>
                           Privacy Policy
                         </a>
                       </p>
                       <p>
-                        <a href='/Careers' className='text-reset'>
+                        <a href='/Careers' className='text-reset footer-link'>
                           Careers
                         </a>
                       </p>
