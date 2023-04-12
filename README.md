@@ -10,7 +10,12 @@ In the project directory, you can run:
 
 
 ############################ modules to install
+#backend modules
 npm install axios
+
+#language modules
+npm install react-i18next i18next --save
+npm install i18next-http-backend i18next-browser-languagedetector --save
 ###############################################
 
 
