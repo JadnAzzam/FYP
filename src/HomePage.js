@@ -34,7 +34,9 @@ const HomePage = () => {
               <img src="/Arcade 2.png" alt="Card front" />
             </div>
             <div className="back">
-              <p>Arcades are a blast! Spend an afternoon socializing and competing with friends to beat the high score.</p>
+              <p>Arcades are a blast! Spend an afternoon socializing and competing with friends to beat the high score. Fun starts 
+              <Link to="/Games"> now </Link>
+              </p>
             </div>
           </div>
 
@@ -45,7 +47,7 @@ const HomePage = () => {
             </div>
             <div className="back">
               <p>Coding is a blast! With programming skills, you can create your own video games and turn your imagination into a playable reality. Don't be afraid to experiment and have some fun while
-              <Link to=""> together!</Link>
+              <Link to="/coding"> together!</Link>
               </p>
             </div>
           </div>
@@ -109,7 +111,7 @@ const HomePage = () => {
             </div>
             <div className="back">
               <p>Virtual tours are like magic carpets that can take you anywhere you want to go! You can explore the world without ever leaving your house. Let's go on a virtual adventure 
-              <Link to="/Virtual"> together!</Link>
+              <Link to="britishmusuem"> together!</Link>
               </p>
             </div>
           </div>
