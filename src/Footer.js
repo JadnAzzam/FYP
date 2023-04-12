@@ -1,5 +1,9 @@
 import React from 'react';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
+// import Navigation from './Navigation';
+// import { useTranslation } from 'react-i18next';
+// import './i18next';
+
 
 function Footer (){
     return (
@@ -42,7 +46,9 @@ function Footer (){
                         Imagination Station
                       </h6>
                       <p>
-                        Imagination Station is an initiative to ensure that time spent by your child is informative, fun, and secure. 
+                      Imagination Station is an initiative to ensure that time spent by your child is informative, fun, and secure
+                      
+                      {/* {t('Imagination Station is an initiative to ensure that time spent by your child is informative, fun, and secure.')}  */}
                       </p>
                     </MDBCol>
       

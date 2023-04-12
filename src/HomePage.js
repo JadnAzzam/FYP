@@ -5,6 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import "@fontsource/bubblegum-sans";
 
+
 const HomePage = () => {
     return (
         <div className= "HomePage">

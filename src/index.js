@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './index.css';
@@ -9,6 +9,7 @@ import CodingVideo from './VirtualTour';
 import Britishmusuem from './Britishmusuem';
 // import Coding from './coding';
 import Games from './Games';
+import './i18next';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -18,6 +19,7 @@ import './App.css';
 
 
 ReactDOM.render(
+  <Suspense fallback={(<div>Loading~~~</div>)}>
   <Router>
     <Switch>
       <Route exact path="/">
@@ -49,5 +51,6 @@ ReactDOM.render(
       </Route>
     </Switch>
   </Router>,
+  </Suspense>,
   document.getElementById('root')
 );
