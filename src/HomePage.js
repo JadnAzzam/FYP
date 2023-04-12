@@ -126,8 +126,6 @@ const HomePage = () => {
               <p>Arcades are a blast! Spend an afternoon socializing and competing with friends to beat the high score.</p>
             </div>
           </div>
-
-
           <div className="card">
             <div className="front">
               <img src="/coding.png" alt="Card front" />
@@ -170,9 +168,7 @@ const HomePage = () => {
           <a href="/"><i className="fa fa-instagram"></i></a>
         </div>
       </footer> */}
-      <footer> <Footer /> </footer>
-
-            
+      <footer> <Footer /> </footer>  
              </div>
 
     )
