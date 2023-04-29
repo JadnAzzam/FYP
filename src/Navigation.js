@@ -3,16 +3,9 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { useTranslation } from 'react-i18next';
 
 
 function Navigation() {
-
-  const { t, i18n } = useTranslation();
-
-  function handleClick(lang){
-    i18n.changeLanguage(lang);
-  }
 
   return (
     <Navbar bg="light" expand="lg">
@@ -33,15 +26,6 @@ function Navigation() {
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
-
-        <div>
-        <button onClick={()=>handleClick('en')}>English</button>
-        <button onClick={()=>handleClick('ar')}>Arabic</button>
-        <button onClick={()=>handleClick('fr')}>French</button>
-        </div>
-
-        <p>{t('Hello')}</p>
-        
       </Container>
       
     </Navbar>
@@ -51,7 +35,4 @@ function Navigation() {
 
 }
         
-      
-
-
 export default Navigation;
