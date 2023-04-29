@@ -7,10 +7,31 @@ const handleSumbit = (e) => {
   const form = document.querySelector("form");
   const fd = new FormData(form);
 
-  axios.post('http://localhost/backend/login.php', fd).then(function (response) {
-    console.log(response);
-    document.getElementById("status").innerHTML= response.data;
-  });
+
+  var e = document.getElementById("roleSelector");
+  var value = e.value;
+
+  if (value == "parent") {
+
+    axios.post('http://localhost/backend/parents/login.php', fd).then(function (response) {
+      if (response.data == "successful") {
+       
+
+        window.location.href = "/dashboard";
+      }
+      else
+        document.getElementById("status").innerHTML = response.data;
+    });
+  } else {
+    axios.post('http://localhost/backend/children/login.php', fd).then(function (response) {
+      if (response.data == "successful")
+        window.location.href = "/Home";
+      else
+        document.getElementById("status").innerHTML = response.data;
+    });
+  }
+
+
 }
 
 function SignInSignUpBox() {
@@ -18,14 +39,15 @@ function SignInSignUpBox() {
     <div className="signInSignUpBox">
       <div className="signInSignUpBoxContent">
         <div className="signInSignUpBoxTitle">ImaginationStation</div>
-        <form>
-          <input type="text" placeholder="Username" />
-          <select className="role">
+        <form method="post"
+          onSubmit={(event) => handleSumbit(event)}>
+          <input name="username" type="text" placeholder="Username" />
+          <select id="roleSelector" className="role">
             <option value="parent" >Parent </option>
             <option value="child">Child</option>
           </select>
-          <input type="password" placeholder="Password" />
-          <button type="submit"><Link to="/home">Sign In</Link></button>
+          <input name="password" type="password" placeholder="Password" />
+          <button type="submit">Sign In</button>
         </form>
         <div className="signInSignUpBoxLink">
           Don't have an account? <Link to="/signup">Sign up.</Link>

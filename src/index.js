@@ -7,8 +7,11 @@ import HomePage from './HomePage';
 import SignUpBox from './SignUpBox';
 import CodingVideo from './VirtualTour';
 import Britishmusuem from './Britishmusuem';
+import Dashboard from './Dashboard';
 // import Coding from './coding';
 import Games from './Games';
+import CourseDetails from './CourseDetails';
+import Activity from './Activity';
 import './i18next';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -48,6 +51,15 @@ ReactDOM.render(
       </Route>
       <Route exact path="/Games">
         <Games/>
+      </Route>
+      <Route exact path="/CourseDetails">
+        <CourseDetails/>
+      </Route>
+      <Route exact path="/Activity">
+        <Activity/>
+      </Route>
+      <Route exact path="/Dashboard">
+        <Dashboard />
       </Route>
     </Switch>
   </Router>,

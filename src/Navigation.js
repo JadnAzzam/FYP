@@ -24,8 +24,7 @@ function Navigation() {
             <Nav.Link href="/Home">Home</Nav.Link>
             <NavDropdown title="dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Categories</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Dashboard
-              </NavDropdown.Item>
+              <Nav.Link href="/Dashboard">Dashboard</Nav.Link>
               {/* <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item> */}
               <NavDropdown.Divider />
               <NavDropdown.Item href="/signin">
