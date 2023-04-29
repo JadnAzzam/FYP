@@ -1,0 +1,94 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+  }
+  
+  .registrationForm {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+  }
+  
+  .registrationForm .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-check-inline {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+  
+  .form-check-label {
+    margin-left: 5px;
+  }
+  
+  .btn-primary {
+    display: block;
+    width: 60%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: #ffadb6;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .registeredChildrenTableContainer {
+    margin-top: 20px;
+  }
+  
+  .registeredChildrenTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .registeredChildrenTable th,
+  .registeredChildrenTable td {
+    border: 1px solid #333333;
+    padding: 8px;
+  }
+  
+  .registeredChildrenTable th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .registeredChildrenTable td {
+    text-align: center;
+  }
+  
+  .actionsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .actionButton {
+    padding: 5px 10px;
+    border: none;
+    background-color: #ffadb6;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f2f2f2;
+  }
+  

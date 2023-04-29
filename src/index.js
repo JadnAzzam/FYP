@@ -14,6 +14,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import ScratchEditor from './scratcheditor';
+import Dashboard from './Dashboard';
 
 
 
@@ -47,6 +48,10 @@ ReactDOM.render(
       <Route exact path="/Games">
         <Games/>
       </Route>
+      <Route exact path="/dashboard">
+        <Dashboard/>
+      </Route>
+      
     </Switch>
   </Router>,
   document.getElementById('root')
