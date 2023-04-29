@@ -2,44 +2,42 @@ import React, { useEffect, useState } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Navigation from './Navigation';
 import Footer from './Footer';
-import axios from "axios";
-import { Link } from 'react-router-dom';
-
-
-
-const handleSumbit = (e) => {
-  e.preventDefault();
-  const form = document.querySelector("form");
-  const fd = new FormData(form);
-
-  axios.post('http://localhost/backend/children/create.php', fd).then(function (response) {
-    //console.log(response);
-    //document.getElementById("status").innerHTML= response.data;
-    window.location.href= "/Dashboard";
-  });
-}
-
-const handleDelete = (e) => {
-  e.preventDefault();
-  const form = e.currentTarget;
-  const fd = new FormData(form);
-
-  axios.post('http://localhost/backend/children/delete.php', fd).then(function (response) {
-    //console.log(response);
-    //document.getElementById("status").innerHTML= response.data;
-    window.location.href= "/Dashboard";
-  });
-}
+import axios from 'axios';
+import './Dashboard.css';
 
 const Dashboard = () => {
-  const [children, setChildren] = React.useState([])
+  const [children, setChildren] = useState([]);
   useEffect(() => {
     axios
-      .get('http://localhost/backend/children/list.php', {params:{parentId:6}})  //static 
+      .get('http://localhost/backend/children/list.php', { params: { parentId: 6 } })
       .then((res) => {
-        setChildren(res.data)
-      })
-  }, [])
+        setChildren(res.data);
+      });
+  }, []);
+
+  const handleSumbit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const fd = new FormData(form);
+
+    axios
+      .post('http://localhost/backend/children/create.php', fd)
+      .then(function (response) {
+        window.location.href = '/Dashboard';
+      });
+  };
+
+  const handleDelete = (e) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+
+    axios
+      .post('http://localhost/backend/children/delete.php', fd)
+      .then(function (response) {
+        window.location.href = '/Dashboard';
+      });
+  };
 
   return (
     <div>
@@ -47,56 +45,73 @@ const Dashboard = () => {
         <Navigation />
       </Navbar>
 
-      <div className="">
-    
-        <form 
-          method="post"
-          onSubmit={(event) => handleSumbit(event)}>
-            <input name="fullName" type="text" placeholder="Full Name" />
-            <input name="parentId" type="hidden" value="6" /> 
-          <input name="username" type="text" placeholder="Username" />
-          {/* <input type="tel" placeholder="Phone number" /> */}
-          <input name="password" type="password" placeholder="Password" />
-          <select id="languageSelector" name="language" className="role">
-            <option value="en" >English </option>
-            <option value="ar">Arabic</option>
-            <option value="fr">French</option>
-          </select>
-          <button type="submit">Add My Bundle of Joy!</button>
-        </form>
-      
-      <p id="status"></p>
-    </div>
-    <div>
-      <h2>All Registed Children</h2>
-      <table>
-        <tr>
-          <th>Full Name</th>
-          <th>Username</th>
-          <th>Language</th>
-          <th>Actions</th>
-        </tr>
-        {children.map(child => (
-          <tr>
-            <td>{child.fullName}</td>
-            <td>{child.username}</td>
-            <td>{child.language}</td>
-            <td>View Edit
-              <form id="deleteForm"  method="post" onSubmit={(event) => handleDelete(event)} > 
-                <input name="childID" type="hidden" value={`${child.Id}`} />
-                <button  type="submit">Remove</button> </form>
-            </td>
-          </tr>
-        
-        ))}
-      </table>
-    </div>
+      <div className="container">
+        <div className="registrationForm">
+          <h2>Child form</h2>
+          <form method="post" onSubmit={handleSumbit}>
+            <div className="form-group">
+              <input name="fullName" type="text" placeholder="Full Name" className="form-control" />
+            </div>
+            <div className="form-group">
+              <input name="username" type="text" placeholder="Username" className="form-control" />
+            </div>
+            <div className="form-group">
+              <input name="password" type="password" placeholder="Password" className="form-control" />
+            </div>
+            <div className="form-group">
+              <label>Language:</label>
+              <div className="form-check form-check-inline">
+                <input className="form-check-input" type="checkbox" id="english" name="language[]" value="english" />
+                <label className="form-check-label" htmlFor="english">English</label>
+              </div>
+              <div className="form-check form-check-inline">
+                <input className="form-check-input" type="checkbox" id="arabic" name="language[]" value="arabic" />
+                <label className="form-check-label" htmlFor="arabic">Arabic</label>
+              </div>
+              <div className="form-check form-check-inline">
+                <input className="form-check-input" type="checkbox" id="french" name="language[]" value="french" />
+                <label className="form-check-label" htmlFor="french">French</label>
+              </div>
+            </div>
+            <button type="submit" className="btn btn-primary">Register Child</button>
+          </form>
+        </div>
 
-        <footer>
-        <Footer />
-      </footer>
-    </div>
-  );
+        <div className="registeredChildrenTable">
+          <h2>All Registered Children</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Full Name</th>
+                <th>Username</th>
+                <th>Language</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {children.map((child) => (
+                <tr key={child.id}>
+                  <td>{child.fullName}</td>
+                  <td>{
+                    child.username}</td>
+                    <td>{child.language}</td>
+                    <td>
+                    <button className="actionBtn">View</button>
+                    <button className="actionBtn">Edit</button>
+                    <form onSubmit={handleDelete}>
+                    <input name="childID" type="hidden" value={child.id} />
+                    <button type="submit" className="actionBtn">Remove</button>
+                    </form>
+                    </td>
+                    </tr>
+                    ))}
+                    </tbody>
+                    </table>
+                    </div>
+                    </div>
+                    <Footer />
+</div>
+);
 };
 
 export default Dashboard;
