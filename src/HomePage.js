@@ -5,6 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import "@fontsource/bubblegum-sans";
 
+
 const HomePage = () => {
     return (
         <div className= "HomePage">
@@ -128,8 +129,6 @@ const HomePage = () => {
               <p>Arcades are a blast! Spend an afternoon socializing and competing with friends to beat the high score.</p>
             </div>
           </div>
-
-
           <div className="card">
             <div className="front">
               <img src="/coding.png" alt="Card front" />
@@ -161,9 +160,18 @@ const HomePage = () => {
          
             </div>
         </div>
-       <Footer /> 
+      {/* </div> */}
 
-            
+      {/* Footer */}
+      {/* <footer>
+        <p>FYP project</p>
+        <div className="social-icons">
+          <a href="/"><i className="fa fa-youtube"></i></a>
+          <a href="/"><i className="fa fa-facebook"></i></a>
+          <a href="/"><i className="fa fa-instagram"></i></a>
+        </div>
+      </footer> */}
+      <footer> <Footer /> </footer>  
              </div>
 
     )

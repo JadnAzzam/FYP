@@ -4,6 +4,7 @@ import SignInSignUpBox from './SignInSignUpBox';
 import HomePage from './HomePage';
 import SignUpPage from './SignUpPage';
 import Navigation from './Navigation';
+import Dashboard from './Dashboard';
 
 
 

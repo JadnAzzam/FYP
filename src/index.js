@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './index.css';
@@ -7,8 +7,12 @@ import HomePage from './HomePage';
 import SignUpBox from './SignUpBox';
 import CodingVideo from './VirtualTour';
 import Britishmusuem from './Britishmusuem';
-import Coding from './coding';
+import Dashboard from './Dashboard';
+// import Coding from './coding';
 import Games from './Games';
+import CourseDetails from './CourseDetails';
+import Activity from './Activity';
+import './i18next';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -19,6 +23,7 @@ import Dashboard from './Dashboard';
 
 
 ReactDOM.render(
+  <Suspense fallback={(<div>Loading~~~</div>)}>
   <Router>
     <Switch>
       <Route exact path="/">
@@ -36,9 +41,9 @@ ReactDOM.render(
       <Route exact path="/Virtual">
         <CodingVideo />
       </Route>
-      <Route exact path="/coding">
+      {/* <Route exact path="/coding">
         <Coding/>
-      </Route>
+      </Route> */}
       {/* <Route exact path="/scratcheditor">
         <ScratchEditor/>
       </Route> */}
@@ -48,11 +53,17 @@ ReactDOM.render(
       <Route exact path="/Games">
         <Games/>
       </Route>
-      <Route exact path="/dashboard">
-        <Dashboard/>
+      <Route exact path="/CourseDetails">
+        <CourseDetails/>
       </Route>
-      
+      <Route exact path="/Activity">
+        <Activity/>
+      </Route>
+      <Route exact path="/Dashboard">
+        <Dashboard />
+      </Route>
     </Switch>
   </Router>,
+  </Suspense>,
   document.getElementById('root')
 );

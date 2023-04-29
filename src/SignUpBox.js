@@ -6,9 +6,10 @@ const handleSumbit = (e) => {
   const form = document.querySelector("form");
   const fd = new FormData(form);
 
-  axios.post('http://localhost/backend/register.php', fd).then(function (response) {
-    console.log(response);
-    document.getElementById("status").innerHTML= response.data;
+  axios.post('http://localhost/backend/parents/register.php', fd).then(function (response) {
+    //console.log(response);
+    //document.getElementById("status").innerHTML= response.data;
+    window.location.href= "/signIn";
   });
 }
 
@@ -22,11 +23,12 @@ function SignUpBox() {
         <form 
           method="post"
           onSubmit={(event) => handleSumbit(event)}>
+            <input name="fullName" type="text" placeholder="Full Name" />
           <input name="username" type="text" placeholder="Username" />
-          <input type="email" placeholder="Email" />
+          <input name= "email" type="email" placeholder="Email" />
           {/* <input type="tel" placeholder="Phone number" /> */}
           <input name="password" type="password" placeholder="Password" />
-          <button type="submit"><Link to="/">Sign Up</Link></button>
+          <button type="submit">Sign Up</button>
         </form>
         <div className="signUpBoxLink">
           Already have an account? <Link to="/signIn">Sign in.</Link>
