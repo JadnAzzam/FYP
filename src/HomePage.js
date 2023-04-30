@@ -160,8 +160,18 @@ const HomePage = () => {
          
             </div>
         </div>
+      {/* </div> */}
 
-       <footer><Footer />  </footer>
+      {/* Footer */}
+      {/* <footer>
+        <p>FYP project</p>
+        <div className="social-icons">
+          <a href="/"><i className="fa fa-youtube"></i></a>
+          <a href="/"><i className="fa fa-facebook"></i></a>
+          <a href="/"><i className="fa fa-instagram"></i></a>
+        </div>
+      </footer> */}
+      <footer> <Footer /> </footer>  
              </div>
 
     )
