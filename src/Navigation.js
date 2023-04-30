@@ -1,12 +1,12 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+// import Container from 'react-bootstrap/Container';
+// import Nav from 'react-bootstrap/Nav';
+// import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { useTranslation } from 'react-i18next';
 import './Navigation.css';
 
-function Navigation({ handleLanguageSelection }) {
+function Navigation({handleLanguageSelection }) {
   const { t } = useTranslation();
 
   const handleCheckboxChange = (e) => {
@@ -15,8 +15,8 @@ function Navigation({ handleLanguageSelection }) {
   };
 
   return (
-    <div> 
-    <div>
+    <div className="nav_main"> 
+      <div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light" >
           <a class="navbar-brand mar" href="#action">ImaginationStation</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,19 +40,22 @@ function Navigation({ handleLanguageSelection }) {
         
       </div>
 
-    <div>
-      <label>
-        <input type="checkbox" value="en" onChange={handleCheckboxChange}/>English
-      </label>
-      <label>
-        <input type="checkbox" value="ar" onChange={handleCheckboxChange}/>Arabic
-      </label>
-      <label>
-        <input type="checkbox" value="fr" onChange={handleCheckboxChange}/>French
-      </label>
-    </div>
+      <div>
+        <h4>Display Language</h4>
+        <div className="lang-checkbox">
+        <label>
+          <input type="checkbox" value="en" onChange={handleCheckboxChange}/>English
+        </label>
+        <label>
+          <input type="checkbox" value="ar" onChange={handleCheckboxChange}/>Arabic
+        </label>
+        <label>
+          <input type="checkbox" value="fr" onChange={handleCheckboxChange}/>French
+        </label>
+        </div>
+      </div>
 
-  </div>
+    </div>
   );
 }
 
