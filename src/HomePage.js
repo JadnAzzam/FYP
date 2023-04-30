@@ -48,7 +48,7 @@ const HomePage = () => {
           <div className="flex-box space">
           <div className="card">
             <div className="front">
-              <img src="/Arcade 2.png" alt="Card front" />
+              <img src="/Arcade.jpg" alt="Card front" />
             </div>
             <div className="back">
               <p>Arcades are a blast! Spend an afternoon socializing and competing with friends to beat the high score. Fun starts 
@@ -86,6 +86,8 @@ const HomePage = () => {
               </p>
             </div>
           </div>
+          
+          
         </div>
         )}
         </div>
