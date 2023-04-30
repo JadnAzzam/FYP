@@ -3,12 +3,12 @@ import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-k
 // import Navigation from './Navigation';
 // import { useTranslation } from 'react-i18next';
 // import './i18next';
+import './Footer.css';
 
 
 function Footer (){
     return (
-      
-      
+          <div className="">
             <MDBFooter bgColor='light' className='text-center text-lg-start text-muted border-bottom '>
               
         
@@ -44,11 +44,7 @@ function Footer (){
                           Privacy Policy
                         </a>
                       </p>
-                      <p>
-                        <a href='/Careers' className='text-reset footer-link'>
-                          Careers
-                        </a>
-                      </p>
+                      
                     </MDBCol>
         
                     <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-2'>
@@ -62,23 +58,22 @@ function Footer (){
                         ImaginationStation@gmail.com
                       </p>
                       <p>
-                        <MDBIcon icon="phone" className="me-3" /> + 96181632293
+                        <MDBIcon icon="phone" className="me-3" /> + 01 234 567 89
                       </p>
-                      <p>
-                        <MDBIcon icon="print" className="me-3" /> + 01 234 567 89
-                      </p>
+                      
                     </MDBCol>
                   </MDBRow>
                 </MDBContainer>
               </section>
         
-              {/* <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
+              <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
                 © 2023 Copyright:
-                <a className='text-reset fw-bold' href='https://ImaginationStation.com/'>
+                <a className='text-reset fw-bold' href='http://localhost:3000/Home'>
                   ImaginationStation.com
                 </a>
-              </div> */}
+              </div>
             </MDBFooter>
+          </div>
           );
         }
 
