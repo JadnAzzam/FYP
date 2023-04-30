@@ -5,51 +5,6 @@ body {
 }
 
 
-/* Navbar styles */
-/* nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background-color: #f2f2f2;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  align-items: center;
-}
-
-nav ul li {
-  margin-right: 2rem;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #0099cc;
-}
-
-nav ul ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-}
-
-nav ul ul li {
-  display: block;
-}
-
-nav ul li:hover > ul {
-  display: block;
-} */
-/* Our navbar component styling is imported from bootstrap */
-/* Main content styles */
 .content {
   display: flex;
   flex-direction: column;
@@ -63,7 +18,7 @@ nav ul li:hover > ul {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  margin: 2rem 0;
+  /* margin: 2rem 0; */
 }
 
 .flex-box .container {
@@ -85,10 +40,12 @@ nav ul li:hover > ul {
 
 .card {
   position: relative;
-  width: 200px;
+  width: 250px;
   height: 300px;
   perspective: 1000px;
   margin-right: 2rem;
+  margin-left: 2rem;
+  margin-top: 1rem;
   border-radius: 20px;
 }
 
@@ -155,6 +112,55 @@ nav ul li:hover > ul {
 }
 
 
+/* /////////////////////////////// cards responsiveness ///////////////////// */
+
+@media screen and (max-width: 500px) {
+  .flex-box {
+    flex-direction: column;
+    align-items: center;
+    margin: 0rem 0;
+  }
+
+  .space {
+    padding: 0px;
+  }
+  
+  .card {
+    /* margin-right: 0; */
+    /* margin-bottom: 2rem; */
+    
+    width: 95%;
+    max-width: 250px;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 900px) {
+  .flex-box {
+    flex-wrap: wrap;
+    margin: 0rem 0;
+  }
+
+  .space {
+    padding: 0px;
+  }
+  
+  .card {
+    margin-right: 2rem;
+    /* width: calc(33.33% - 1rem); */
+    max-width: 250px;
+  }
+}
+
+/* @media screen and (min-width: 1200px) {
+  .flex-box {
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    margin-right: 2rem;
+    width: calc(25% - 1.5rem);
+  }
+} */
 
 
 
