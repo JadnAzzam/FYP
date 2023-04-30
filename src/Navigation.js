@@ -77,6 +77,21 @@ function Navigation() {
             </ul>
           </div>
         </nav>
+
+        <div>
+          <label>
+            <input type="checkbox" value="en" onChange={handleCheckboxChange}/>English
+          </label>
+          <label>
+            <input type="checkbox" value="ar" onChange={handleCheckboxChange}/>Arabic
+          </label>
+          <label>
+            <input type="checkbox" value="fr" onChange={handleCheckboxChange}/>French
+          </label>
+        </div>
+
+
+        <p>{t('Hello')}</p>
       </div>
 
     
