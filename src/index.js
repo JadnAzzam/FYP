@@ -24,6 +24,7 @@ import './App.css';
 
 ReactDOM.render(
   <Suspense fallback={(<div>Loading~~~</div>)}>
+    
 
   <Router>
     <Switch>
@@ -65,6 +66,7 @@ ReactDOM.render(
       </Route>
     </Switch>
   </Router>,
+  
    </Suspense>, 
   
   document.getElementById('root')
