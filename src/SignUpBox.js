@@ -17,24 +17,22 @@ function SignUpBox() {
   return (
     <div className="signUpBox">
       <div className="signUpBoxContent">
-        <div className="signUpBoxTitle">ImaginationStation</div>
-        <div className="signUpBoxSubtitle">Welcome to sign up page
-        .</div>
+        <h1 className="signUpBoxTitle">ImaginationStation</h1>
+        <h6 className="signUpBoxSubtitle">Welcome to the sign up page.</h6>
         <form 
           method="post"
           onSubmit={(event) => handleSumbit(event)}>
-            <input name="fullName" type="text" placeholder="Full Name" />
+          <input name="fullName" type="text" placeholder="Full Name" />
           <input name="username" type="text" placeholder="Username" />
           <input name= "email" type="email" placeholder="Email" />
-          {/* <input type="tel" placeholder="Phone number" /> */}
           <input name="password" type="password" placeholder="Password" />
           <button type="submit">Sign Up</button>
+          <p className="signUpBoxLink">
+            Already have an account? <Link to="/signIn">Sign in.</Link>
+          </p>
         </form>
-        <div className="signUpBoxLink">
-          Already have an account? <Link to="/signIn">Sign in.</Link>
-        </div>
+        
       </div>
-      <p id="status"></p>
     </div>
   );
 }

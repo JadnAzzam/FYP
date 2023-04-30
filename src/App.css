@@ -151,46 +151,6 @@ body {
   }
 }
 
-/* @media screen and (min-width: 1200px) {
-  .flex-box {
-    flex-wrap: wrap;
-  }
-  
-  .card {
-    margin-right: 2rem;
-    width: calc(25% - 1.5rem);
-  }
-} */
-
-
-
-
-/* Footer styles */
-/* footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f2f2f2;
-  padding: 1rem;
-}
-
-footer p {
-  margin-right: 2rem;
-}
-
-.social-icons a {
-  margin-right: 1rem;
-  color: #333;
-}
-
-.social-icons a:hover {
-  color: #0099cc;
-}
-
-.social-icons i {
-  font-size: 1.5rem;
-} */
-
 
 /* ##################################################################################################################################
 
@@ -204,7 +164,7 @@ footer p {
 
 .signUpBox {
   width: 400px;
-  height: 500px;
+  height: 550px;
   margin: auto;
   padding: 20px;
   position: absolute;
@@ -217,6 +177,21 @@ footer p {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
   text-align: center;
 }
+@media screen and (max-width: 500px) {  
+  .signUpBox {
+    max-width: 95%;
+    max-height: 90%;
+  }
+  
+}
+
+@media screen and (min-width: 501px) and (max-width: 900px) {
+  .signUpBox {
+    max-width: 95%;
+    max-height: 90%;
+  }
+}
+
 .signUpBoxSubtitle{
   margin-bottom: 20px;
   margin-top:10 px;
@@ -228,7 +203,7 @@ footer p {
 
 .signUpBoxTitle {
   margin-top: 0;
-  font-size: 32px;
+  /* font-size: 32px; */
   font-weight: 700;
   color: #333333;
 }
@@ -255,7 +230,7 @@ footer p {
   margin-top: 20px;
   margin-bottom: 20px;
   border: none;
-  background-color: #ffadb6;
+  background-color: #d31b31;
   color: #ffffff;
   font-size: 16px;
   font-weight: 700;
@@ -304,9 +279,24 @@ footer p {
   padding: 20px;
 }
 
+@media screen and (max-width: 500px) {  
+  .signInSignUpBox {
+    max-width: 95%;
+    max-height: 90%;
+  }
+  
+}
+
+@media screen and (min-width: 501px) and (max-width: 900px) {
+  .signInSignUpBox {
+    max-width: 95%;
+    max-height: 90%;
+  }
+}
+
 .signInSignUpBoxTitle {
-  color: #ffadb6;
-  font-size: 36px;
+  color: #f48592;
+  /* font-size: 36px; */
   font-weight: bold;
   margin: 0;
   text-align: center;
@@ -344,7 +334,7 @@ footer p {
 }
 
 .signInSignUpBox form button[type="submit"] {
-  background-color: #ffadb6;
+  background-color: #f1374d;
   border: none;
   border-radius: 20px;
   color: #fff;
@@ -370,7 +360,7 @@ footer p {
 }
 
 .signInSignUpBoxLink a {
-  color: #ffadb6;
+  color: #f16373;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
 }

@@ -38,7 +38,7 @@ function SignInSignUpBox() {
   return (
     <div className="signInSignUpBox">
       <div className="signInSignUpBoxContent">
-        <div className="signInSignUpBoxTitle">ImaginationStation</div>
+        <h1 className="signInSignUpBoxTitle">ImaginationStation</h1>
         <form method="post"
           onSubmit={(event) => handleSumbit(event)}>
           <input name="username" type="text" placeholder="Username" />

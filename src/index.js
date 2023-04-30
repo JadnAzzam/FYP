@@ -64,8 +64,8 @@ ReactDOM.render(
         <Dashboard />
       </Route>
     </Switch>
-  </Router>,
-   </Suspense>, 
+  </Router>
+   </Suspense>,
   
   document.getElementById('root')
 );

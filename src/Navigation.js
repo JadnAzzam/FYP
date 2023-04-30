@@ -57,7 +57,6 @@ function Navigation() {
 
   return (
     <div>
-      
         <nav class="navbar navbar-expand-lg navbar-light bg-light" >
           <a class="navbar-brand mar" href="#action">ImaginationStation</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -78,20 +77,7 @@ function Navigation() {
           </div>
         </nav>
 
-        <div>
-          <label>
-            <input type="checkbox" value="en" onChange={handleCheckboxChange}/>English
-          </label>
-          <label>
-            <input type="checkbox" value="ar" onChange={handleCheckboxChange}/>Arabic
-          </label>
-          <label>
-            <input type="checkbox" value="fr" onChange={handleCheckboxChange}/>French
-          </label>
-        </div>
-
-
-        <p>{t('Hello')}</p>
+        
       </div>
 
     
