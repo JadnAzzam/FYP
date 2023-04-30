@@ -17,13 +17,13 @@ import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import ScratchEditor from './scratcheditor';
+// import ScratchEditor from './scratcheditor';
 // import Dashboard from './Dashboard';
 
 
 
 ReactDOM.render(
-  // <Suspense fallback={(<div>Loading~~~</div>)}>
+  <Suspense fallback={(<div>Loading~~~</div>)}>
 
   <Router>
     <Switch>
@@ -65,7 +65,7 @@ ReactDOM.render(
       </Route>
     </Switch>
   </Router>,
-  //  </Suspense>,
+   </Suspense>, 
   
   document.getElementById('root')
 );
