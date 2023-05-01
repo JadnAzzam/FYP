@@ -51,7 +51,7 @@ function Footer (){
                       <h6 className='text-uppercase fw-bold mb-2'>Contact</h6>
                       <p>
                         <MDBIcon icon="home" className="me-2" />
-                        Beirut, Bliss Street, Lebanon
+                        Lebanon, Beirut 
                       </p>
                       <p>
                         <MDBIcon icon="envelope" className="me-3" />
@@ -67,9 +67,9 @@ function Footer (){
               </section>
         
               <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
-                © 2023 Copyright:
+                © 2023 Copyright: 
                 <a className='text-reset fw-bold' href='http://localhost:3000/Home'>
-                  ImaginationStation.com
+                   ImaginationStation
                 </a>
               </div>
             </MDBFooter>
