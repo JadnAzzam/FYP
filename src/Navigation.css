@@ -7,3 +7,13 @@
   margin-top: 0px;
   padding-top: 0;
 }
+
+.lang{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  /* align-items: center; */
+}
+.lang  input{
+  margin-left: 1rem;
+}

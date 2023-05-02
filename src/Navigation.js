@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+// import Container from 'react-bootstrap/Container';
+// import Nav from 'react-bootstrap/Nav';
+// import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 import './Navigation.css';
 import axios from "axios";
 
@@ -39,7 +39,7 @@ function Navigation({ handleLanguageSelection }) {
     <div>
       <div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light" >
-          <a class="navbar-brand mar" href="#action">ImaginationStation</a>
+          <a class="navbar-brand mar" href="/Home">ImaginationStation</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
