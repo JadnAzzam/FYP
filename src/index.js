@@ -9,6 +9,7 @@ import CodingVideo from './VirtualTour';
 import Britishmusuem from './Britishmusuem';
 import Dashboard from './Dashboard';
 // import Coding from './coding';
+import SesameStreet from './SesameStreet';
 import Games from './Games';
 import CourseDetails from './CourseDetails';
 import Activity from './Activity';
@@ -43,9 +44,9 @@ ReactDOM.render(
       <Route exact path="/Virtual">
         <CodingVideo />
       </Route>
-      {/* <Route exact path="/coding">
-        <Coding/>
-      </Route> */}
+      <Route exact path="/SesameStreet">
+        <SesameStreet/>
+      </Route>
       {/* <Route exact path="/scratcheditor">
         <ScratchEditor/>
       </Route> */}

@@ -60,11 +60,11 @@ const HomePage = () => {
 
           <div className="card">
             <div className="front">
-              <img src="/Coding2.png" alt="Card front" />
+              <img src="/sesame.jpg" alt="Card front" />
             </div>
             <div className="back">
-              <p>Coding is a blast! With programming skills, you can create your own video games and turn your imagination into a playable reality. Don't be afraid to experiment and have some fun while
-              <Link to="/coding"> together!</Link>
+              <p>Hey there, kiddos! Welcome to Sesame Street, the coolest place to be for tons of fun and giggles! Get ready to play, sing, and laugh your hearts out with your favorite furry friends all day long! Let's make memories and learn amazing things together on this awesome 
+              <Link to="/SesameStreet"> street!</Link>
               </p>
             </div>
           </div>
@@ -127,7 +127,7 @@ const HomePage = () => {
           </div>
           <div className="card">
             <div className="front">
-              <img src="/paint.png" alt="Card front" />
+              <img src="/Virtualtour.jpg" alt="Card front" />
             </div>
             <div className="back">
               <p>Virtual tours are like magic carpets that can take you anywhere you want to go! You can explore the world without ever leaving your house. Let's go on a virtual adventure 
