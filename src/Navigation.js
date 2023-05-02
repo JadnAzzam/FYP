@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 // import Nav from 'react-bootstrap/Nav';
 // import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-// import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import './Navigation.css';
 import axios from "axios";
 
