@@ -6,10 +6,16 @@ import axios from 'axios';
 import './Dashboard.css';
 
 const Dashboard = () => {
+
+
+
   const [children, setChildren] = useState([]);
   useEffect(() => {
+    if(sessionStorage.getItem("parentId") == -1)
+    window.location.href = '/signIn';
+
     axios
-      .get('http://localhost/backend/children/list.php', { params: { parentId: 6 } })
+      .get('http://localhost/backend/children/list.php', { params: { parentId:  sessionStorage.getItem("parentId") } })
       .then((res) => {
         setChildren(res.data);
       });
@@ -26,6 +32,7 @@ const Dashboard = () => {
         window.location.href = '/Dashboard';
       });
   };
+
 
   const handleDelete = (e) => {
     e.preventDefault();
@@ -49,6 +56,7 @@ const Dashboard = () => {
         <div className="registrationForm">
           <h2>Child form</h2>
           <form method="post" onSubmit={handleSumbit}>
+            <input id="parentIdField" hidden name="parentId" value={sessionStorage.getItem("parentId")} />
             <div className="form-group">
               <input name="fullName" type="text" placeholder="Full Name" className="form-control" />
             </div>
@@ -61,15 +69,15 @@ const Dashboard = () => {
             <div className="form-group">
               <label>Language:</label>
               <div className="form-check form-check-inline">
-                <input className="form-check-input" type="checkbox" id="english" name="language[]" value="english" />
+                <input className="form-check-input" type="checkbox" id="english" name="English" value="english" />
                 <label className="form-check-label" htmlFor="english">English</label>
               </div>
               <div className="form-check form-check-inline">
-                <input className="form-check-input" type="checkbox" id="arabic" name="language[]" value="arabic" />
+                <input className="form-check-input" type="checkbox" id="arabic" name="Arabic" value="arabic" />
                 <label className="form-check-label" htmlFor="arabic">Arabic</label>
               </div>
               <div className="form-check form-check-inline">
-                <input className="form-check-input" type="checkbox" id="french" name="language[]" value="french" />
+                <input className="form-check-input" type="checkbox" id="french" name="French" value="french" />
                 <label className="form-check-label" htmlFor="french">French</label>
               </div>
             </div>
@@ -90,16 +98,15 @@ const Dashboard = () => {
             </thead>
             <tbody>
               {children.map((child) => (
-                <tr key={child.id}>
+                <tr key={child.Id}>
                   <td>{child.fullName}</td>
                   <td>{
                     child.username}</td>
                     <td>{child.language}</td>
                     <td>
-                    <button className="actionBtn">View</button>
                     <button className="actionBtn">Edit</button>
                     <form onSubmit={handleDelete}>
-                    <input name="childID" type="hidden" value={child.id} />
+                    <input name="childID" type="hidden" value={child.Id} />
                     <button type="submit" className="actionBtn">Remove</button>
                     </form>
                     </td>

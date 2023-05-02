@@ -14,20 +14,39 @@ const handleSumbit = (e) => {
   if (value == "parent") {
 
     axios.post('http://localhost/backend/parents/login.php', fd).then(function (response) {
-      if (response.data == "successful") {
-       
+      if (response.data == "password is wrong" || response.data == "User not found") {
 
+        document.getElementById("status").innerHTML = response.data;
+      }
+      else {
+        console.log(response.data);
+
+        sessionStorage.setItem("parentId", -1);
+        sessionStorage.setItem("childId", -1);
+        var id = parseInt(response.data)
+        sessionStorage.setItem("parentId", id);
         window.location.href = "/dashboard";
       }
-      else
-        document.getElementById("status").innerHTML = response.data;
+
     });
   } else {
     axios.post('http://localhost/backend/children/login.php', fd).then(function (response) {
-      if (response.data == "successful")
-        window.location.href = "/Home";
-      else
+
+
+      if (response.data == "password is wrong" || response.data == "User not found") {
+
         document.getElementById("status").innerHTML = response.data;
+      }
+      else {
+        //console.log(response.data);
+        sessionStorage.setItem("parentId", -1);
+        sessionStorage.setItem("childId", -1);
+        var id = parseInt(response.data)
+        sessionStorage.setItem("childId", id);
+        window.location.href = "/Home";
+      }
+
+
     });
   }
 

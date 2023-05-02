@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $password = $_POST['password'];
 
   // Check if the user exists
-  $sql = "SELECT * FROM childrens WHERE username = '" . $username . "'";
+  $sql = "SELECT * FROM parents WHERE username = '" .  $username . "' ";
   $result = $conn->query($sql);
   if ($result->num_rows == 1) {
     // Verify the password
@@ -23,7 +23,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       // Login successful
       $_SESSION['username'] = $username;
       //header("Location: dashboard.php");
-      echo "successful";
+      echo  $row['id'];
+   
+
       exit();
     } else {
       // Password is incorrect
