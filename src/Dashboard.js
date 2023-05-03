@@ -54,40 +54,45 @@ const Dashboard = () => {
 
       <div className="container">
         <div className="registrationForm">
-          <h2>Child form</h2>
+          <h3>Child form</h3>
           <form method="post" onSubmit={handleSumbit}>
+            
             <input id="parentIdField" hidden name="parentId" value={sessionStorage.getItem("parentId")} />
-            <div className="form-group">
+            <div className="form-group tester">
               <input name="fullName" type="text" placeholder="Full Name" className="form-control" />
             </div>
-            <div className="form-group">
+            <div className="form-group tester">
               <input name="username" type="text" placeholder="Username" className="form-control" />
             </div>
-            <div className="form-group">
+            <div className="form-group tester">
               <input name="password" type="password" placeholder="Password" className="form-control" />
             </div>
-            <div className="form-group">
-              <label>Language:</label>
+            <div className="form-group ">
+              <label className="space">Languages: </label>
+
               <div className="form-check form-check-inline">
                 <input className="form-check-input" type="checkbox" id="english" name="English" value="english" />
-                <label className="form-check-label" htmlFor="english">English</label>
+                <label className="" htmlFor="english">English</label>
               </div>
+
               <div className="form-check form-check-inline">
                 <input className="form-check-input" type="checkbox" id="arabic" name="Arabic" value="arabic" />
-                <label className="form-check-label" htmlFor="arabic">Arabic</label>
+                <label className="" htmlFor="arabic">Arabic</label>
               </div>
               <div className="form-check form-check-inline">
                 <input className="form-check-input" type="checkbox" id="french" name="French" value="french" />
-                <label className="form-check-label" htmlFor="french">French</label>
+                <label className="" htmlFor="french">French</label>
               </div>
             </div>
             <button type="submit" className="btn btn-primary">Register Child</button>
           </form>
         </div>
-
+          <br/>
+          <br/>
+          <br/>
         <div className="registeredChildrenTable">
-          <h2>All Registered Children</h2>
-          <table>
+          <h3>All Registered Children</h3>
+          <table className="registeredChildrenTable">
             <thead>
               <tr>
                 <th>Full Name</th>
@@ -100,22 +105,20 @@ const Dashboard = () => {
               {children.map((child) => (
                 <tr key={child.Id}>
                   <td>{child.fullName}</td>
-                  <td>{
-                    child.username}</td>
-                    <td>{child.language}</td>
-                    <td>
-                    <button className="actionBtn">Edit</button>
+                  <td>{child.username}</td>
+                  <td>{child.language}</td>
+                  <td>
                     <form onSubmit={handleDelete}>
-                    <input name="childID" type="hidden" value={child.Id} />
-                    <button type="submit" className="actionBtn">Remove</button>
+                      <input name="childID" type="hidden" value={child.Id} />
+                      <button type="submit" className="actionBtn ayre">Remove</button>
                     </form>
-                    </td>
-                    </tr>
+                  </td>
+                </tr>
                     ))}
-                    </tbody>
-                    </table>
-                    </div>
-                    </div>
+              </tbody>
+          </table>
+        </div>
+      </div>
                     <Footer />
 </div>
 );

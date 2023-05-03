@@ -3,20 +3,21 @@ import Navbar from 'react-bootstrap/Navbar';
 import Navigation from './Navigation';
 import Footer from './Footer';
 
-function SesameStreet() {
+function DisneyJr() {
 
   return (
     <div>
       <Navbar>
         <Navigation />
       </Navbar>
-      <iframe title="e" src="https://www.sesamestreet.org/videos" width="100%" height="600"></iframe>
+      <iframe title="disney junior" src="https://disneyjunior.disney.com" width="100%" height="600"></iframe>
+      
       <footer>
-      <p>© Copyright: SesameStreet</p>
+      <p>© Copyright: DisneyJr </p>
         <Footer />
       </footer>
     </div>
   );
 }
 
-export default SesameStreet;
+export default DisneyJr;

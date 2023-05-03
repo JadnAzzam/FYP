@@ -1,22 +1,24 @@
+
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Navigation from './Navigation';
 import Footer from './Footer';
 
-function SesameStreet() {
+function NationalGeoKids() {
 
   return (
     <div>
       <Navbar>
         <Navigation />
       </Navbar>
-      <iframe title="e" src="https://www.sesamestreet.org/videos" width="100%" height="600"></iframe>
+      <iframe title="NatGeoKids" src="https://www.natgeokids.com/uk/category/discover/" width="100%" height="600"></iframe>
+ 
       <footer>
-      <p>© Copyright: SesameStreet</p>
+      <p>© Copyright: NationalGeoKids</p>
         <Footer />
       </footer>
     </div>
   );
 }
 
-export default SesameStreet;
+export default NationalGeoKids;

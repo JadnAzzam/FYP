@@ -1,6 +1,7 @@
 .mar{
   margin-left: 10px;
   /* padding-left: 20px; */
+  /* cursor:pointer; */
 }
 
 .marup{
@@ -16,4 +17,13 @@
 }
 .lang  input{
   margin-left: 1rem;
+}
+#test {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#hello-msg {
+  /* border: 1px solid black; */
+  /* margin-left: 35rem; */
 }

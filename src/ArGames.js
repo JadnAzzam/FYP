@@ -3,20 +3,21 @@ import Navbar from 'react-bootstrap/Navbar';
 import Navigation from './Navigation';
 import Footer from './Footer';
 
-function SesameStreet() {
-
+const ArGames = () => {
   return (
     <div>
       <Navbar>
         <Navigation />
       </Navbar>
-      <iframe title="e" src="https://www.sesamestreet.org/videos" width="100%" height="600"></iframe>
+
+      <iframe src="https://mbc3.mbc.net/games" width="100%" height="800px"></iframe>
+
       <footer>
-      <p>© Copyright: SesameStreet</p>
+      <p>© Copyright: MBC3 </p>
         <Footer />
       </footer>
     </div>
   );
-}
+};
 
-export default SesameStreet;
+export default ArGames;

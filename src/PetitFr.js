@@ -3,20 +3,22 @@ import Navbar from 'react-bootstrap/Navbar';
 import Navigation from './Navigation';
 import Footer from './Footer';
 
-function SesameStreet() {
 
+const PetitFr = () => {
   return (
     <div>
       <Navbar>
         <Navigation />
       </Navbar>
-      <iframe title="e" src="https://www.sesamestreet.org/videos" width="100%" height="600"></iframe>
-      <footer>
-      <p>© Copyright: SesameStreet</p>
+
+      <iframe title="Petit Poussin" src="https://www.petitpoussin.fr/" width="100%" height="600px" frameBorder="0" allowFullScreen></iframe>
+
+        <footer>
+        <p>© Copyright: Petitpoussin.fr</p>
         <Footer />
       </footer>
     </div>
   );
-}
+};
 
-export default SesameStreet;
+export default PetitFr;

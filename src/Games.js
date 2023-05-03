@@ -14,6 +14,7 @@ const Games = () => {
       <iframe src="https://www.cartoonnetworkhq.com/games" width="100%" height="800px"></iframe>
 
         <footer>
+        <p>© Copyright: Cartoon Network </p>
         <Footer />
       </footer>
     </div>

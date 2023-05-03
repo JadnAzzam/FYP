@@ -4,7 +4,7 @@ import Navigation from './Navigation';
 import Footer from './Footer';
 
 
-const Britishmusuem = () => {
+const FrVirtualTour = () => {
   return (
     <div>
       <Navbar>
@@ -13,21 +13,19 @@ const Britishmusuem = () => {
 
       <iframe
         title="Virtual Tour of Victorian Walk" 
-                src="https://my.matterport.com/show/?m=QLrqiMThfdG"
-                width="100%"
-                height="600"
-                frameBorder="0"
-                allowFullScreen
+        src="https://petitegalerie.louvre.fr/visite-virtuelle/saison6/"
+        width="100%"
+        height="600"
+        frameBorder="0"
+        allowFullScreen
       ></iframe>
-        <footer>
-        <p>© Copyright: Kimbell Art Museum </p>
+      
+      <footer>
+      <p>© Copyright: Louvre.fr </p>
         <Footer />
       </footer>
     </div>
   );
 };
 
-export default Britishmusuem;
-
-
-
+export default FrVirtualTour;

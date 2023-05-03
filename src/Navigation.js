@@ -11,14 +11,14 @@ function Navigation({ handleLanguageSelection }) {
 
 
 
-  useEffect(() => {
-    axios
-      .get('http://localhost/backend/children/get.php', { params: { childID: sessionStorage.getItem("childId") } })
-      .then((res) => {
-        if(res.data != "Child name could not be loaded, try again later.")
-        document.getElementById("hello-msg").innerHTML = "Hello " + res.data + "!";
-      })
-  }, [])
+  // useEffect(() => {
+  //   axios
+  //     .get('http://localhost/backend/children/get.php', { params: { childID: sessionStorage.getItem("childId") } })
+  //     .then((res) => {
+  //       if(res.data != "Child name could not be loaded, try again later.")
+  //       document.getElementById("hello-msg").innerHTML = "Hello " + res.data + "!";
+  //     })
+  // }, [])
 
   const { t } = useTranslation();
 
@@ -36,7 +36,7 @@ function Navigation({ handleLanguageSelection }) {
   };
 
   return (
-    <div>
+    <div id="test">
       <div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light" >
           <a class="navbar-brand mar" href="/Home">ImaginationStation</a>
@@ -48,24 +48,18 @@ function Navigation({ handleLanguageSelection }) {
               <li class="nav-item active">
                 <a class="nav-link" href="/Home">Home <span class="sr-only">(current)</span></a>
               </li>
-              <NavDropdown title="dropdown" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Categories</NavDropdown.Item>
-                <NavDropdown.Item href="/Dashboard">Dashboard</NavDropdown.Item>
-                <NavDropdown.Divider />
-                
-              </NavDropdown>
+              <li class="nav-item active">
+              <button type="submit" class="dropdown-item nav-link" onClick={handleLogout}>Logout</button>
+              </li>
             </ul>
-            <form onSubmit={handleLogout}>
-
-              <button type="submit" className="actionBtn">Logout</button>
-            </form>
+            
 
           </div>
         </nav>
 
 
       </div>
-      <div id="hello-msg">
+      <div id="hello-msg" class="name">
         
       </div>
 
